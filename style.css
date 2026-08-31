@@ -26,3 +26,9 @@ h1{font-size:clamp(62px,7.5vw,116px);letter-spacing:-.04em}
 @media(max-width:900px){.hero{min-height:760px;padding-top:78px;background-position:58% center}.hero::before{background:linear-gradient(90deg,rgba(18,14,14,.86),rgba(18,14,14,.55))}.hero-content{min-height:682px;padding:80px 7vw 65px}}
 @media(max-width:650px){.hero{min-height:720px;background-position:62% center}.hero::before{background:rgba(18,14,14,.64)}.hero-content{min-height:642px;padding:70px 6vw 55px}}
 
+/* Post Instagram nella sezione recensioni */
+.instagram-embed-wrap{display:flex;align-items:center;justify-content:center;background:var(--cream);padding:38px 4vw;min-width:0}
+.instagram-embed-wrap iframe{display:block;width:100%;max-width:540px;height:690px;border:0;background:#fff;border-radius:3px;box-shadow:0 16px 50px rgba(24,20,20,.14)}
+@media(max-width:900px){.instagram-embed-wrap{min-height:730px;padding:35px 6vw}.instagram-embed-wrap iframe{height:680px}}
+@media(max-width:650px){.instagram-embed-wrap{min-height:650px;padding:24px 4vw}.instagram-embed-wrap iframe{height:610px}}
+
