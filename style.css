@@ -83,3 +83,8 @@ h1{font-size:clamp(62px,7.5vw,116px);letter-spacing:-.04em}
 .services .service-card:hover,.services .service-card:not(:first-child):hover{padding:36px}
 @media(max-width:650px){.services .service-list{padding:0 20px}.services .service-card,.services .service-card:not(:first-child),.services .service-card:hover,.services .service-card:not(:first-child):hover{padding:30px 8px}}
 
+/* Evita lo sconfinamento dell'ultima colonna su tablet e finestre strette */
+.services .service-list{grid-template-columns:repeat(3,minmax(0,1fr))}
+.services .service-card{min-width:0}
+@media(max-width:780px){.services .service-list{grid-template-columns:1fr;padding:0 26px}.services .service-card,.services .service-card:not(:first-child),.services .service-card:hover,.services .service-card:not(:first-child):hover{padding:30px 12px;border-right:0;border-bottom:1px solid rgba(24,20,20,.24)}.services .service-card:last-child{border-bottom:0}}
+
