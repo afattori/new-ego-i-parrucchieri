@@ -28,7 +28,12 @@ h1{font-size:clamp(62px,7.5vw,116px);letter-spacing:-.04em}
 
 /* Post Instagram nella sezione recensioni */
 .instagram-embed-wrap{display:flex;align-items:center;justify-content:center;background:var(--cream);padding:38px 4vw;min-width:0}
-.instagram-embed-wrap iframe{display:block;width:100%;max-width:540px;height:690px;border:0;background:#fff;border-radius:3px;box-shadow:0 16px 50px rgba(24,20,20,.14)}
-@media(max-width:900px){.instagram-embed-wrap{min-height:730px;padding:35px 6vw}.instagram-embed-wrap iframe{height:680px}}
-@media(max-width:650px){.instagram-embed-wrap{min-height:650px;padding:24px 4vw}.instagram-embed-wrap iframe{height:610px}}
+.instagram-preview{position:relative;display:block;width:min(100%,540px);overflow:hidden;background:#fff;box-shadow:0 16px 50px rgba(24,20,20,.14)}
+.instagram-preview img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;transition:transform .6s ease}
+.instagram-preview::after{content:"";position:absolute;inset:55% 0 0;background:linear-gradient(transparent,rgba(18,14,14,.72));pointer-events:none}
+.instagram-preview-cta{position:absolute;z-index:1;left:24px;right:24px;bottom:22px;display:flex;align-items:center;justify-content:space-between;color:#fff;font-size:12px;text-transform:uppercase;letter-spacing:.12em}
+.instagram-preview-cta strong{font-weight:500}
+.instagram-preview:hover img{transform:scale(1.025)}
+@media(max-width:900px){.instagram-embed-wrap{padding:35px 6vw}.instagram-preview{width:min(100%,520px)}}
+@media(max-width:650px){.instagram-embed-wrap{padding:24px 4vw}.instagram-preview-cta{left:18px;right:18px;bottom:17px}}
 
