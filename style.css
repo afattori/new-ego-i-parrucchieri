@@ -28,12 +28,22 @@ h1{font-size:clamp(62px,7.5vw,116px);letter-spacing:-.04em}
 
 /* Post Instagram nella sezione recensioni */
 .instagram-embed-wrap{display:flex;align-items:center;justify-content:center;background:var(--cream);padding:38px 4vw;min-width:0}
-.instagram-preview{position:relative;display:block;width:min(100%,540px);overflow:hidden;background:#fff;box-shadow:0 16px 50px rgba(24,20,20,.14)}
-.instagram-preview img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;transition:transform .6s ease}
-.instagram-preview::after{content:"";position:absolute;inset:55% 0 0;background:linear-gradient(transparent,rgba(18,14,14,.72));pointer-events:none}
-.instagram-preview-cta{position:absolute;z-index:1;left:24px;right:24px;bottom:22px;display:flex;align-items:center;justify-content:space-between;color:#fff;font-size:12px;text-transform:uppercase;letter-spacing:.12em}
-.instagram-preview-cta strong{font-weight:500}
-.instagram-preview:hover img{transform:scale(1.025)}
+.instagram-preview{display:block;width:min(100%,540px);overflow:hidden;background:#fff;color:var(--ink);border:1px solid rgba(24,20,20,.1);border-radius:11px;box-shadow:0 18px 55px rgba(24,20,20,.16);transition:transform .3s ease,box-shadow .3s ease}
+.instagram-card-head{display:flex;align-items:center;gap:11px;padding:12px 14px}
+.instagram-card-head .instagram-avatar{width:40px;height:40px;object-fit:cover;clip-path:circle(43% at 51% 50%);flex:0 0 auto}
+.instagram-account{display:flex;flex:1;min-width:0;flex-direction:column;line-height:1.25}
+.instagram-account strong{overflow:hidden;font-size:12px;font-weight:600;text-overflow:ellipsis;white-space:nowrap}
+.instagram-account small{overflow:hidden;color:var(--muted);font-size:9px;text-overflow:ellipsis;white-space:nowrap}
+.instagram-badge{color:#b1548d;font-size:10px;font-weight:600;white-space:nowrap}
+.instagram-preview>img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.instagram-actions{display:flex;align-items:center;gap:14px;padding:10px 15px 5px;font-family:Arial,sans-serif;font-size:26px;line-height:1}
+.instagram-actions .instagram-save{margin-left:auto;transform:rotate(90deg)}
+.instagram-card-copy{display:flex;flex-direction:column;padding:7px 15px 14px;line-height:1.4}
+.instagram-card-copy strong{font-size:12px}.instagram-card-copy small{color:var(--muted);font-size:10px}
+.instagram-preview-cta{display:flex;align-items:center;justify-content:space-between;margin:0 12px 12px;padding:13px 15px;background:linear-gradient(100deg,#b1548d,#e05c74 55%,#ee8a42);color:#fff;border-radius:7px;font-size:10px;text-transform:uppercase;letter-spacing:.11em}
+.instagram-preview-cta strong{font-weight:600}
+.instagram-preview:hover{transform:translateY(-4px);box-shadow:0 24px 65px rgba(24,20,20,.22)}
+.instagram-preview:focus-visible{outline:3px solid #e05c74;outline-offset:4px}
 @media(max-width:900px){.instagram-embed-wrap{padding:35px 6vw}.instagram-preview{width:min(100%,520px)}}
 @media(max-width:650px){.instagram-embed-wrap{padding:24px 4vw}.instagram-preview-cta{left:18px;right:18px;bottom:17px}}
 
