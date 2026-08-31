@@ -18,3 +18,11 @@ h1{font-size:clamp(62px,7.5vw,116px);letter-spacing:-.04em}
 .quote-band{border-top:12px solid var(--rose)}
 .contact{background:#f8e9e2}
 
+/* Hero con la foto reale del salone */
+.hero{position:relative;isolation:isolate;display:block;min-height:820px;background:#181414 url("assets/salone-new-ego.jpeg") center 48%/cover no-repeat;padding-top:92px}
+.hero::before{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,rgba(18,14,14,.82) 0%,rgba(18,14,14,.67) 38%,rgba(18,14,14,.34) 68%,rgba(18,14,14,.26) 100%)}
+.hero-content{display:flex;min-height:728px;max-width:760px;flex-direction:column;justify-content:center;align-self:auto;padding:70px 6vw 65px 8vw}
+.hero-content .eyebrow,.hero-content h1,.hero-content .hero-intro,.hero-content .hero-actions,.hero-content .rating{position:relative;z-index:1}
+@media(max-width:900px){.hero{min-height:760px;padding-top:78px;background-position:58% center}.hero::before{background:linear-gradient(90deg,rgba(18,14,14,.86),rgba(18,14,14,.55))}.hero-content{min-height:682px;padding:80px 7vw 65px}}
+@media(max-width:650px){.hero{min-height:720px;background-position:62% center}.hero::before{background:rgba(18,14,14,.64)}.hero-content{min-height:642px;padding:70px 6vw 55px}}
+
