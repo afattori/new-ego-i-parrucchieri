@@ -31,3 +31,15 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Evidenzia il giorno corrente secondo il fuso orario del salone.
+const todayInItaly = new Intl.DateTimeFormat('en-US', {
+  weekday: 'long',
+  timeZone: 'Europe/Rome'
+}).format(new Date()).toLowerCase();
+
+const todayHours = document.querySelector(`.hours [data-day="${todayInItaly}"]`);
+if (todayHours) {
+  todayHours.classList.add('is-today');
+  todayHours.setAttribute('aria-current', 'date');
+}
+
