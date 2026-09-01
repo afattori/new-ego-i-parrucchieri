@@ -93,6 +93,7 @@ h1{font-size:clamp(62px,7.5vw,116px);letter-spacing:-.04em}
 .manifesto-copy p{max-width:560px}
 .manifesto-photo{grid-column:1/-1;margin:70px 0 0;overflow:hidden;background:var(--cream);aspect-ratio:16/9}
 .manifesto-photo img{object-position:center 42%}
+@media(min-width:901px){.manifesto-photo{width:clamp(430px,38vw,580px);justify-self:center;aspect-ratio:505/598}}
 
 /* Tre colonne equilibrate nella sezione contatti */
 .contact{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(38px,4vw,72px)}
