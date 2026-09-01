@@ -88,8 +88,18 @@ h1{font-size:clamp(62px,7.5vw,116px);letter-spacing:-.04em}
 .services .service-card{min-width:0}
 @media(max-width:780px){.services .service-list{grid-template-columns:1fr;padding:0 26px}.services .service-card,.services .service-card:not(:first-child),.services .service-card:hover,.services .service-card:not(:first-child):hover{padding:30px 12px;border-right:0;border-bottom:1px solid rgba(24,20,20,.24)}.services .service-card:last-child{border-bottom:0}}
 
-/* Foto sotto il manifesto del salone */
-.manifesto-photo{grid-column:2/4;margin:70px 0 0;overflow:hidden;background:var(--cream);aspect-ratio:16/9}
+/* Layout desktop del manifesto e foto */
+.manifesto{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);column-gap:5vw}
+.manifesto-heading,.manifesto-copy{min-width:0}
+.manifesto-copy{padding:46px 0 0;border-left:0}
+.manifesto-photo{grid-column:1/-1;margin:70px 0 0;overflow:hidden;background:var(--cream);aspect-ratio:16/9}
 .manifesto-photo img{object-position:center 42%}
-@media(max-width:900px){.manifesto-photo{grid-column:auto;margin-top:50px;aspect-ratio:4/5}}
+
+/* Mantiene la sezione contatti entro la larghezza disponibile */
+.contact{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:6vw}
+.contact>*{min-width:0}
+.contact-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:3vw}
+
+@media(max-width:900px){.manifesto{grid-template-columns:1fr;column-gap:0}.manifesto-copy{padding-top:35px}.manifesto-photo{grid-column:auto;margin-top:50px;aspect-ratio:4/5}.contact{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr 1.45fr;gap:5vw}}
+@media(max-width:650px){.contact-grid{grid-template-columns:1fr}}
 
