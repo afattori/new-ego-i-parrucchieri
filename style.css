@@ -89,9 +89,12 @@ h1{font-size:clamp(62px,7.5vw,116px);letter-spacing:-.04em}
 @media(max-width:780px){.services .service-list{grid-template-columns:1fr;padding:0 26px}.services .service-card,.services .service-card:not(:first-child),.services .service-card:hover,.services .service-card:not(:first-child):hover{padding:30px 12px;border-right:0;border-bottom:1px solid rgba(24,20,20,.24)}.services .service-card:last-child{border-bottom:0}}
 
 /* Layout desktop del manifesto e foto */
-.manifesto{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);column-gap:5vw}
+.manifesto{grid-template-columns:minmax(0,1.35fr) minmax(340px,.8fr);column-gap:clamp(55px,6vw,110px)}
 .manifesto-heading,.manifesto-copy{min-width:0}
-.manifesto-copy{padding:46px 0 0;border-left:0}
+.manifesto-heading h2{font-size:clamp(50px,4.6vw,72px)}
+.manifesto-heading h2 span{white-space:nowrap}
+.manifesto-copy{margin-top:46px;padding:6px 0 6px clamp(38px,4vw,70px);border-left:1px solid var(--line)}
+.manifesto-copy p{max-width:560px}
 .manifesto-photo{grid-column:1/-1;margin:70px 0 0;overflow:hidden;background:var(--cream);aspect-ratio:16/9}
 .manifesto-photo img{object-position:center 42%}
 
@@ -100,6 +103,7 @@ h1{font-size:clamp(62px,7.5vw,116px);letter-spacing:-.04em}
 .contact>*{min-width:0}
 .contact-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:3vw}
 
-@media(max-width:900px){.manifesto{grid-template-columns:1fr;column-gap:0}.manifesto-copy{padding-top:35px}.manifesto-photo{grid-column:auto;margin-top:50px;aspect-ratio:4/5}.contact{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr 1.45fr;gap:5vw}}
+@media(max-width:1100px) and (min-width:901px){.manifesto{grid-template-columns:minmax(0,1.15fr) minmax(310px,.85fr);column-gap:45px}.manifesto-heading h2{font-size:clamp(45px,5vw,58px)}.manifesto-copy{padding-left:35px}}
+@media(max-width:900px){.manifesto{grid-template-columns:1fr;column-gap:0}.manifesto-heading h2 span{white-space:normal}.manifesto-copy{margin-top:45px;padding:35px 0 0;border-left:0}.manifesto-photo{grid-column:auto;margin-top:50px;aspect-ratio:4/5}.contact{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr 1.45fr;gap:5vw}}
 @media(max-width:650px){.contact-grid{grid-template-columns:1fr}}
 
