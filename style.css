@@ -36,6 +36,8 @@ h1{font-size:clamp(62px,7.5vw,116px);letter-spacing:-.04em}
 .instagram-account small{overflow:hidden;color:var(--muted);font-size:9px;text-overflow:ellipsis;white-space:nowrap}
 .instagram-badge{color:#b1548d;font-size:10px;font-weight:600;white-space:nowrap}
 .instagram-preview>img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.instagram-logo-cover{display:grid;place-items:center;width:100%;aspect-ratio:4/5;padding:clamp(52px,9vw,104px);background:radial-gradient(circle at 50% 42%,#fffaf7 0 28%,#f7e7e1 66%,#edc8bc 100%)}
+.instagram-logo-cover img{width:min(100%,290px);height:auto;aspect-ratio:auto;object-fit:contain;filter:drop-shadow(0 16px 25px rgba(24,20,20,.12))}
 .instagram-actions{display:flex;align-items:center;gap:14px;padding:10px 15px 5px;font-family:Arial,sans-serif;font-size:26px;line-height:1}
 .instagram-actions .instagram-save{margin-left:auto;transform:rotate(90deg)}
 .instagram-card-copy{display:flex;flex-direction:column;padding:7px 15px 14px;line-height:1.4}
