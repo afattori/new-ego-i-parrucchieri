@@ -88,3 +88,17 @@ h1{font-size:clamp(62px,7.5vw,116px);letter-spacing:-.04em}
 .services .service-card{min-width:0}
 @media(max-width:780px){.services .service-list{grid-template-columns:1fr;padding:0 26px}.services .service-card,.services .service-card:not(:first-child),.services .service-card:hover,.services .service-card:not(:first-child):hover{padding:30px 12px;border-right:0;border-bottom:1px solid rgba(24,20,20,.24)}.services .service-card:last-child{border-bottom:0}}
 
+/* Nuova direzione: hero più leggibile e servizi a pannelli editoriali */
+.hero::before{background:linear-gradient(90deg,rgba(10,8,8,.93) 0%,rgba(10,8,8,.82) 34%,rgba(10,8,8,.48) 60%,rgba(10,8,8,.16) 100%)}
+.hero h1{color:#fffaf7;text-shadow:0 4px 28px rgba(0,0,0,.58)}
+.hero h1 em{color:#f3d2c4;text-shadow:0 3px 22px rgba(0,0,0,.48)}
+.hero .hero-intro{text-shadow:0 2px 14px rgba(0,0,0,.55)}
+.services .service-list{gap:18px;padding:0;background:transparent;border:0;box-shadow:none;backdrop-filter:none}
+.services .service-card,.services .service-card:not(:first-child){padding:38px;background:linear-gradient(145deg,#fae9e3,#efcfc5);border:1px solid rgba(255,255,255,.18);box-shadow:0 16px 36px rgba(0,0,0,.18);transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+.services .service-card:hover,.services .service-card:not(:first-child):hover{padding:38px;background:linear-gradient(145deg,#fae9e3,#efcfc5);border-color:rgba(233,185,168,.82);transform:translateY(-6px);box-shadow:0 24px 48px rgba(0,0,0,.28)}
+.services .service-icon{font-size:36px}
+.services .service-index{font-size:11px;letter-spacing:.22em}
+@media(max-width:900px){.hero::before{background:linear-gradient(90deg,rgba(10,8,8,.9),rgba(10,8,8,.56))}}
+@media(max-width:780px){.services .service-list{gap:14px;padding:0}.services .service-card,.services .service-card:not(:first-child),.services .service-card:hover,.services .service-card:not(:first-child):hover{padding:32px;border:1px solid rgba(255,255,255,.18)}}
+@media(max-width:650px){.hero::before{background:rgba(10,8,8,.68)}}
+
